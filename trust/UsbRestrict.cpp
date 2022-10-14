@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 The LineageOS Project
+ * Copyright (C) 2022 The Portal Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,12 +20,12 @@
 #include <android-base/logging.h>
 
 namespace vendor {
-namespace lineage {
+namespace portalrom {
 namespace trust {
 namespace V1_0 {
 namespace implementation {
 
-// Methods from ::vendor::lineage::trust::V1_0::IUsbRestrict follow.
+// Methods from ::vendor::portalrom::trust::V1_0::IUsbRestrict follow.
 Return<bool> UsbRestrict::isEnabled() {
     std::ifstream file(USB_CONTROL_PATH);
     std::string content;
@@ -49,5 +49,5 @@ Return<void> UsbRestrict::setEnabled(bool enabled) {
 }  // namespace implementation
 }  // namespace V1_0
 }  // namespace trust
-}  // namespace lineage
+}  // namespace portalrom
 }  // namespace vendor
